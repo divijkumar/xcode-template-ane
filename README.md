@@ -37,20 +37,21 @@ Installing and using the ANE XCode Project template
 Please ensure that you have XCode4 with iOS5 installed. Also its preferable to close XCode now.
 
 1. In the attached zip (AIR Native Extension.zip) there is a bash script "install_templates.sh". From the command line:
+
     $ ./install_templates.sh
+
 This will copy the XCode4 project templates for creating AIR Native Extensions for iOS to the relevant folder in the user's home directory, from where XCode will load them when launched.
 2. Now launch XCode, click File->New->New Project (Command+Shift+N). You would see a new entry for "AIR Native Extension" under iOS:
 [[AIR Native Extension/screenshots/new_project.png]]
 3. Click Next and you would see the following options for configuring the XCode project.
 [[AIR Native Extension/screenshots/options.png]]
-* 	The first field is the name of the extension.
-* 	The second field is a company prefix.
-* 	The third field is a static field containing the extension identifier which is formed by combining the first and second fields. Please note that the extension identifier mentioned here should be the same as the one specified in the application descriptor of the AIR app that will use this ANE.
-* 	The fourth field is the complete path to the AIR SDK. (Please ensure that you provide a complete path, without any "~" for HOME dir). The path provided here should be such that, <path_to_AIR_sdk>/bin/adt exists. There is a small quirk that you'd notice here. Even though you provide the complete path to the AIR sdk, the initial "/" vanishes as soon as you tab out of this field. This will be taken care of, so you may safely ignore this.
-* 	The fifth field is the complete path to the SWC or the ActionScript library file. This is essentially the ActionScript part of your native extension. Here again as soon as you tab out of this field, the initial "/" will vanish. You may ignore this safely.
+*    The first field is the name of the extension.
+*    The second field is a company prefix.
+*    The third field is a static field containing the extension identifier which is formed by combining the first and second fields. Please note that the extension identifier mentioned here should be the same as the one specified in the application descriptor of the AIR app that will use this ANE.
+*    The fourth field is the complete path to the AIR SDK. (Please ensure that you provide a complete path, without any "~" for HOME dir). The path provided here should be such that, <path_to_AIR_sdk>/bin/adt exists. There is a small quirk that you'd notice here. Even though you provide the complete path to the AIR sdk, the initial "/" vanishes as soon as you tab out of this field. This will be taken care of, so you may safely ignore this.
+*    The fifth field is the complete path to the SWC or the ActionScript library file. This is essentially the ActionScript part of your native extension. Here again as soon as you tab out of this field, the initial "/" will vanish. You may ignore this safely.
 4. Click Next and you would be asked to select a folder where you want to create your XCode project and keep your native code.
 5. Click Next and XCode would create a project for you.
-
 [[AIR Native Extension/screenshots/created_project.png]]
 
 
