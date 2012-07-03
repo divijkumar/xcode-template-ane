@@ -37,18 +37,12 @@ Installing and using the ANE XCode Project template
 Please ensure that you have XCode4 with iOS5 installed. Also its preferable to close XCode now.
 
 1. In the attached zip (AIR Native Extension.zip) there is a bash script "install_templates.sh". From the command line:
-
-	$$$>./install_templates.sh
-
+    $ ./install_templates.sh
 This will copy the XCode4 project templates for creating AIR Native Extensions for iOS to the relevant folder in the user's home directory, from where XCode will load them when launched.
 2. Now launch XCode, click File->New->New Project (Command+Shift+N). You would see a new entry for "AIR Native Extension" under iOS:
-
 [[AIR Native Extension/screenshots/new_project.png]]
-
 3. Click Next and you would see the following options for configuring the XCode project.
-
 [[AIR Native Extension/screenshots/options.png]]
-
 * 	The first field is the name of the extension.
 * 	The second field is a company prefix.
 * 	The third field is a static field containing the extension identifier which is formed by combining the first and second fields. Please note that the extension identifier mentioned here should be the same as the one specified in the application descriptor of the AIR app that will use this ANE.
