@@ -39,7 +39,6 @@ Please ensure that you have XCode4 with iOS5 installed. Also its preferable to c
 1. In the attached zip (AIR Native Extension.zip) there is a bash script "install_templates.sh". From the command line:
 
     $ ./install_templates.sh
-
 This will copy the XCode4 project templates for creating AIR Native Extensions for iOS to the relevant folder in the user's home directory, from where XCode will load them when launched.
 2. Now launch XCode, click File->New->New Project (Command+Shift+N). You would see a new entry for "AIR Native Extension" under iOS:
 [[AIR Native Extension/screenshots/new_project.png]]
