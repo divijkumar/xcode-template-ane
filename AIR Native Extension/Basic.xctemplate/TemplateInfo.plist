@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.divij.ane.unit.basic</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Extension Name</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Description</key>
+			<string>Your extension&apos;s name.</string>
+			<key>EmptyReplacement</key>
+			<string>ExtensionName</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>extensionIdentifierPrefix</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Company Identifier Prefix</string>
+			<key>Description</key>
+			<string>Your company&apos;s extension identifier prefix.</string>
+			<key>EmptyReplacement</key>
+			<string>com.yourcompany</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>bundleIdentifier</string>
+			<key>Name</key>
+			<string>Extension Identifier</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Description</key>
+			<string>Your extension identifier.</string>
+			<key>Default</key>
+			<string>___VARIABLE_extensionIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+	</array>
+	<key>Project</key>
+	<dict>
+		<key>SharedSettings</key>
+		<dict>
+			<key>GCC_C_LANGUAGE_STANDARD</key>
+			<string>gnu99</string>
+			<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+			<string>YES</string>
+			<key>GCC_WARN_UNUSED_VARIABLE</key>
+			<string>YES</string>
+			<key>GCC_WARN_ABOUT_MISSING_PROTOTYPES</key>
+			<string>YES</string>
+			<key>ALWAYS_SEARCH_USER_PATHS</key>
+			<string>NO</string>
+		</dict>
+		<key>Configurations</key>
+		<dict>
+			<key>Debug</key>
+			<dict>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<string>DEBUG=1 $(inherited)</string>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+			</dict>
+			<key>Release</key>
+			<dict>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>Name</key>
+			<string>___PACKAGENAME___</string>
+			<key>SharedSettings</key>
+			<dict>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>Configurations</key>
+			<dict>
+				<key>Debug</key>
+				<dict/>
+				<key>Release</key>
+				<dict/>
+			</dict>
+		</dict>
+	</array>
+	<key>Definitions</key>
+	<dict>
+		<key>*:comments</key>
+		<string>//
+//  ___FILENAME___
+//  ___PACKAGENAME___
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//
+</string>
+		<key>*:import:*</key>
+		<string>#import &quot;___*___&quot;
+</string>
+		<key>*:*:importFoundation</key>
+		<string>#import &lt;Foundation/Foundation.h&gt;
+</string>
+		<key>___PACKAGENAME___-Prefix.pch</key>
+		<dict>
+			<key>Beginning</key>
+			<string>//
+// Prefix header for all source files of the &apos;___PACKAGENAME___&apos; target in the &apos;___PACKAGENAME___&apos; project
+//
+</string>
+			<key>Group</key>
+			<string>Supporting Files</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>___PACKAGENAME___-Prefix.pch:objC</key>
+		<dict>
+			<key>Beginning</key>
+			<string>#ifdef __OBJC__</string>
+			<key>End</key>
+			<string>#endif</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>
