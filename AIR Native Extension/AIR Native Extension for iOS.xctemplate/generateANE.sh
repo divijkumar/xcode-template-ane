@@ -30,7 +30,7 @@ rm -rf "$CONFIGURATION_BUILD_DIR"/swcContents
 
 #Run the ADT command to generate the ANE
 pushd "$CONFIGURATION_BUILD_DIR"
-"$AIR_SDK_PATH"/bin/adt -package -target ane "$TARGET_NAME" extension.xml -swc "$EXTENSION_SWC_FILE_NAME" -platform iPhone-ARM -platformoptions platformoptions.xml "$NATIVE_EXTENSION_STATIC_LIB_NAME" library.swf
+"$AIR_SDK_PATH"/bin/adt -package -target ane "$TARGET_NAME" extension.xml -swc "$EXTENSION_SWC_FILE_NAME" -platform default library.swf -platform iPhone-ARM -platformoptions platformoptions.xml "$NATIVE_EXTENSION_STATIC_LIB_NAME" library.swf 
 popd
 
 echo "$TARGET_NAME" generated at "$CONFIGURATION_BUILD_DIR"/"$TARGET_NAME" 

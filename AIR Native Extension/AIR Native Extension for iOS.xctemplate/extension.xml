@@ -40,5 +40,8 @@ either expressed or implied, of the FreeBSD Project.
 				<finalizer>ExtFinalizer</finalizer>
 			</applicationDeployment>
 		</platform>
+		<platform name="default"> 
+			<applicationDeployment/> 
+		</platform>
 	</platforms>
 </extension>

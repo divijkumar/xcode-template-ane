@@ -119,7 +119,17 @@ FREObject IsSupported(FREContext ctx, void* funcData, uint32_t argc, FREObject a
     
 	FREObject fo;
     
-	FRENewObjectFromBool(YES, &fo);
+	FREResult aResult = FRENewObjectFromBool(YES, &fo);
+    if (aResult == FRE_OK)
+    {
+        //things are fine
+        NSLog(@"Result = %d", aResult);
+    }
+    else
+    {
+        //aResult could be FRE_INVALID_ARGUMENT or FRE_WRONG_THREAD, take appropriate action.
+        NSLog(@"Result = %d", aResult);
+    }
     
 	NSLog(@"Exiting IsSupported()");
     
