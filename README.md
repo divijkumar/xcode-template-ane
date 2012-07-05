@@ -3,6 +3,10 @@ xcode-template-ane
 
 This repository contains an XCode template that can be used to create AIR native extensions or ANEs for iOS from within XCode.
 
+This README refers to some screenshots which may not appear if you are reading it on github. To read this README with the screenshots, please go to 
+https://github.com/divijkumar/xcode-template-ane/wiki
+
+
 Using XCode templates for creating ANEs for iOS
 ===============================================
 
