@@ -36,38 +36,38 @@
  *
  * Created by ___FULLUSERNAME___ on ___DATE___.
  * Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
-*/
+ */
 
 #import "___FILEBASENAME___.h"
 
-/* ExtInitializer()
+/* ___VARIABLE_productName:RFC1034Identifier___ExtInitializer()
  * The extension initializer is called the first time the ActionScript side of the extension
  * calls ExtensionContext.createExtensionContext() for any context.
  *
  * Please note: this should be same as the <initializer> specified in the extension.xml 
  */
-void ExtInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet) 
+void ___VARIABLE_productName:RFC1034Identifier___ExtInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet) 
 {
-    NSLog(@"Entering ExtInitializer()");
-    
+    NSLog(@"Entering ___VARIABLE_productName:RFC1034Identifier___ExtInitializer()");
+
     *extDataToSet = NULL;
     *ctxInitializerToSet = &ContextInitializer;
     *ctxFinalizerToSet = &ContextFinalizer;
-    
-    NSLog(@"Exiting ExtInitializer()");
+
+    NSLog(@"Exiting ___VARIABLE_productName:RFC1034Identifier___ExtInitializer()");
 }
 
-/* ExtFinalizer()
+/* ___VARIABLE_productName:RFC1034Identifier___ExtFinalizer()
  * The extension finalizer is called when the runtime unloads the extension. However, it may not always called.
  *
  * Please note: this should be same as the <finalizer> specified in the extension.xml 
  */
-void ExtFinalizer(void* extData) 
+void ___VARIABLE_productName:RFC1034Identifier___ExtFinalizer(void* extData) 
 {
-    NSLog(@"Entering ExtFinalizer()");
-    
+    NSLog(@"Entering ___VARIABLE_productName:RFC1034Identifier___ExtFinalizer()");
+
     // Nothing to clean up.
-    NSLog(@"Exiting ExtFinalizer()");
+    NSLog(@"Exiting ___VARIABLE_productName:RFC1034Identifier___ExtFinalizer()");
     return;
 }
 
@@ -77,19 +77,19 @@ void ExtFinalizer(void* extData)
 void ContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet)
 {
     NSLog(@"Entering ContextInitializer()");
-    
+
     /* The following code describes the functions that are exposed by this native extension to the ActionScript code.
      * As a sample, the function isSupported is being provided.
      */
-	*numFunctionsToTest = 1;
-    
-	FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * (*numFunctionsToTest));
-	func[0].name = (const uint8_t*) "isSupported";
-	func[0].functionData = NULL;
+    *numFunctionsToTest = 1;
+
+    FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * (*numFunctionsToTest));
+    func[0].name = (const uint8_t*) "isSupported";
+    func[0].functionData = NULL;
     func[0].function = &IsSupported;
-	
-	*functionsToSet = func;
-    
+
+    *functionsToSet = func;
+
     NSLog(@"Exiting ContextInitializer()");
 }
 
@@ -101,10 +101,10 @@ void ContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, u
 void ContextFinalizer(FREContext ctx) 
 {
     NSLog(@"Entering ContextFinalizer()");
-    
+
     // Nothing to clean up.
     NSLog(@"Exiting ContextFinalizer()");
-	return;
+    return;
 }
 
 
@@ -114,12 +114,12 @@ void ContextFinalizer(FREContext ctx)
  * to be able to call the native functions in the ANE from their ActionScript code
  */
 FREObject IsSupported(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[]) {
-    
+
     NSLog(@"Entering IsSupported()");
-    
-	FREObject fo;
-    
-	FREResult aResult = FRENewObjectFromBool(YES, &fo);
+
+    FREObject fo;
+
+    FREResult aResult = FRENewObjectFromBool(YES, &fo);
     if (aResult == FRE_OK)
     {
         //things are fine

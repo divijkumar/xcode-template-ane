@@ -36,8 +36,8 @@ either expressed or implied, of the FreeBSD Project.
 		<platform name="iPhone-ARM">
 			<applicationDeployment>
 				<nativeLibrary>lib___PACKAGENAME___.a</nativeLibrary>
-				<initializer>ExtInitializer</initializer>
-				<finalizer>ExtFinalizer</finalizer>
+				<initializer>___VARIABLE_productName:RFC1034Identifier___ExtInitializer</initializer>
+				<finalizer>___VARIABLE_productName:RFC1034Identifier___ExtFinalizer</finalizer>
 			</applicationDeployment>
 		</platform>
 		<platform name="default"> 

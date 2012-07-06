@@ -40,20 +40,20 @@
 #import <Foundation/Foundation.h>
 #import "FlashRuntimeExtensions.h"
 
-/* ExtInitializer()
+/* ___VARIABLE_productName:RFC1034Identifier___ExtInitializer()
  * The extension initializer is called the first time the ActionScript side of the extension
  * calls ExtensionContext.createExtensionContext() for any context.
  *
  * Please note: this should be same as the <initializer> specified in the extension.xml 
 */
-void ExtInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet);
+void ___VARIABLE_productName:RFC1034Identifier___ExtInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet);
 
-/* ExtFinalizer()
+/* ___VARIABLE_productName:RFC1034Identifier___ExtFinalizer()
  * The extension finalizer is called when the runtime unloads the extension. However, it may not always called.
  *
  * Please note: this should be same as the <finalizer> specified in the extension.xml 
 */
-void ExtFinalizer(void* extData);
+void ___VARIABLE_productName:RFC1034Identifier___ExtFinalizer(void* extData);
 
 /* ContextInitializer()
  * The context initializer is called when the runtime creates the extension context instance.
