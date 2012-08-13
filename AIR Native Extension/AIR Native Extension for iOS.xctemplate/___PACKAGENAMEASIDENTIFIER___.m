@@ -77,19 +77,17 @@ void ___VARIABLE_productName:RFC1034Identifier___ExtFinalizer(void* extData)
 void ContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet)
 {
     NSLog(@"Entering ContextInitializer()");
-
+    
     /* The following code describes the functions that are exposed by this native extension to the ActionScript code.
-     * As a sample, the function isSupported is being provided.
      */
-    *numFunctionsToTest = 1;
-
-    FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * (*numFunctionsToTest));
-    func[0].name = (const uint8_t*) "isSupported";
-    func[0].functionData = NULL;
-    func[0].function = &IsSupported;
-
+    static FRENamedFunction func[] = 
+    {
+        MAP_FUNCTION(isSupported, NULL),
+    };
+    
+    *numFunctionsToTest = sizeof(func) / sizeof(FRENamedFunction);
     *functionsToSet = func;
-
+    
     NSLog(@"Exiting ContextInitializer()");
 }
 
@@ -113,26 +111,23 @@ void ContextFinalizer(FREContext ctx)
  * Users of this template are expected to change this and add similar functions 
  * to be able to call the native functions in the ANE from their ActionScript code
  */
-FREObject IsSupported(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[]) {
-
+ANE_FUNCTION(isSupported)
+{
     NSLog(@"Entering IsSupported()");
-
+    
     FREObject fo;
-
+    
     FREResult aResult = FRENewObjectFromBool(YES, &fo);
     if (aResult == FRE_OK)
     {
-        //things are fine
         NSLog(@"Result = %d", aResult);
     }
     else
     {
-        //aResult could be FRE_INVALID_ARGUMENT or FRE_WRONG_THREAD, take appropriate action.
         NSLog(@"Result = %d", aResult);
     }
     
-	NSLog(@"Exiting IsSupported()");
-    
+	NSLog(@"Exiting IsSupported()");    
 	return fo;
 }
 
