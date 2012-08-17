@@ -54,6 +54,17 @@
 			<key>PathType</key>
 			<string>Group</string>
 		</dict>
+		<key>debugIPA.sh</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Supporting Files</string>
+			</array>
+			<key>Path</key>
+			<string>./debugIPA.sh</string>
+			<key>PathType</key>
+			<string>Group</string>
+		</dict>
 		<key>___PACKAGENAME___-Prefix.pch:objC:importFoundation</key>
 		<string>#import &lt;Foundation/Foundation.h&gt;
 </string>
@@ -72,6 +83,7 @@
 		<string>extension.xml</string>
 		<string>platformoptions.xml</string>
 		<string>generateANE.sh</string>
+		<string>debugIPA.sh</string>
 	</array>
 	<key>Options</key>
 	<array>
@@ -112,6 +124,8 @@
 	<dict>
 		<key>SharedSettings</key>
 		<dict>
+			<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+			<string>iPhone Developer</string>
 			<key>GCC_ENABLE_CPP_EXCEPTIONS</key>
 			<string>NO</string>
 			<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
@@ -214,6 +228,39 @@
 				<string></string>
 				<key>EXECUTABLE_EXTENSION</key>
 				<string>ane</string>
+				<key>NATIVEEXTENSION_SWC</key>
+				<string>/___VARIABLE_extensionSWC___</string>
+				<key>AIR_SDK_PATH</key>
+				<string>/___VARIABLE_airSDKPath___</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Debug___PACKAGENAME___AIRApp</string>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>ShellScript</string>
+					<key>ShellPath</key>
+					<string>/bin/bash</string>
+					<key>ShellScript</key>
+					<string>
+								chmod 755 &quot;$PROJECT_DIR/$PROJECT_NAME/debugIPA.sh&quot;
+								&quot;$PROJECT_DIR/$PROJECT_NAME/debugIPA.sh&quot;
+</string>
+				</dict>
+			</array>
+			<key>ProductType</key>
+			<string>com.apple.product-type.application</string>
+			<key>Dependencies</key>
+			<array>
+				<string>1</string>
+			</array>
+			<key>SharedSettings</key>
+			<dict>
+				<key>PRODUCT_NAME</key>
+				<string>Debug___PACKAGENAME___AIRApp</string>
 				<key>NATIVEEXTENSION_SWC</key>
 				<string>/___VARIABLE_extensionSWC___</string>
 				<key>AIR_SDK_PATH</key>
